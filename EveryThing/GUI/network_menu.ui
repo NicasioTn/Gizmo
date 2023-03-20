@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgba(9,36,43,255)</string>
+  </property>
+  <widget class="QPushButton" name="back_Button">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>640</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+color: rgb(255, 255, 255);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+border-color: rgb(255, 255, 255);
+
+</string>
+   </property>
+   <property name="text">
+    <string>BACK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image_Label">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>80</y>
+     <width>111</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius :35px;
+border-top-right-radius : 35px; 
+border-bottom-left-radius : 35px; 
+border-bottom-right-radius : 35px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../335935261_1233133820640440_2835599617957295021_n.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>120</y>
+     <width>861</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid;
+color: rgb(255, 255, 255);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+border-color: rgba(80,218,107,255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="https_Button">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>450</y>
+     <width>321</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(80,218,107,255);
+border-top-left-radius :20px;
+border-top-right-radius : 20px; 
+border-bottom-left-radius :20px; 
+border-bottom-right-radius : 20px</string>
+   </property>
+   <property name="text">
+    <string>HTTPS TESTING</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_Label">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>170</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>40</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgba(80,218,107,255);</string>
+   </property>
+   <property name="text">
+    <string>NETWORK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image2_Label">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>210</y>
+     <width>141</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius :35px;
+border-top-right-radius : 35px; 
+border-bottom-left-radius : 35px; 
+border-bottom-right-radius : 35px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../335585359_5518230938277058_2782196655381214381_n.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="vulnerability_Button">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>360</y>
+     <width>321</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(80,218,107,255);
+border-top-left-radius :20px;
+border-top-right-radius : 20px; 
+border-bottom-left-radius :20px; 
+border-bottom-right-radius : 20px</string>
+   </property>
+   <property name="text">
+    <string>VULNERABILITY SCANNING</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_Label2">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>170</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>40</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>ENGINEER</string>
+   </property>
+  </widget>
+  <zorder>widget_3</zorder>
+  <zorder>back_Button</zorder>
+  <zorder>image_Label</zorder>
+  <zorder>https_Button</zorder>
+  <zorder>name_Label</zorder>
+  <zorder>image2_Label</zorder>
+  <zorder>vulnerability_Button</zorder>
+  <zorder>name_Label2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

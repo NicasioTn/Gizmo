@@ -1,0 +1,17 @@
+Host,Port,State,Service,Version
+(203.159.92.102),PORT,STATE,SERVICE,VERSION
+(203.159.92.102),20/tcp,closed,ftp-data,
+(203.159.92.102),21/tcp,open,ftp,Pure-FTPd
+(203.159.92.102),22/tcp,open,ssh,OpenSSH 8.0 (protocol 2.0)
+(203.159.92.102),53/tcp,open,domain,ISC BIND 9.11.36 (RedHat Enterprise Linux 8)
+(203.159.92.102),80/tcp,open,http,Apache/2
+(203.159.92.102),110/tcp,open,pop3,Dovecot DirectAdmin pop3d
+(203.159.92.102),143/tcp,open,imap,Dovecot imapd
+(203.159.92.102),443/tcp,open,ssl/https,Apache/2
+(203.159.92.102),465/tcp,open,ssl/smtp,Exim smtpd 4.96
+(203.159.92.102),587/tcp,open,smtp,Exim smtpd 4.96
+(203.159.92.102),993/tcp,open,imaps?,
+(203.159.92.102),995/tcp,open,pop3s?,
+(203.159.92.102),2222/tcp,open,ssl/EtherNetIP-1?,
+(203.159.92.102),35500/tcp,closed,unknown,
+(203.159.92.102),3,services,unrecognized,"despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :"

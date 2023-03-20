@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Vladimir Script</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgba(9,36,43,255)</string>
+  </property>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>150</y>
+     <width>861</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid;
+color: rgb(255, 255, 255);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+border-color: rgba(80,218,107,255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_Label">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>190</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>40</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgba(80,218,107,255);</string>
+   </property>
+   <property name="text">
+    <string>SELECT USER</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_Label2">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>190</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>40</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>TYPE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image2_Label">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>230</y>
+     <width>141</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius :35px;
+border-top-right-radius : 35px; 
+border-bottom-left-radius : 35px; 
+border-bottom-right-radius : 35px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../335585359_5518230938277058_2782196655381214381_n.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image_Label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>100</y>
+     <width>111</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius :35px;
+border-top-right-radius : 35px; 
+border-bottom-left-radius : 35px; 
+border-bottom-right-radius : 35px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../335935261_1233133820640440_2835599617957295021_n.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gizmo_Label">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>650</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>ISAN SECURITY GIZMO BOX</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>670</y>
+     <width>1081</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgba(80,218,107,255);</string>
+   </property>
+   <property name="text">
+    <string>_______________________________________________________________________________________________________________________________________________________________________________________________________________________</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="advance_Button">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>410</y>
+     <width>281</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(80,218,107,255);
+border-top-left-radius :20px;
+border-top-right-radius : 20px; 
+border-bottom-left-radius :20px; 
+border-bottom-right-radius : 20px</string>
+   </property>
+   <property name="text">
+    <string>ADVANCE USER</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="network_Button">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>410</y>
+     <width>281</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(80,218,107,255);
+border-top-left-radius :20px;
+border-top-right-radius : 20px; 
+border-bottom-left-radius :20px; 
+border-bottom-right-radius : 20px</string>
+   </property>
+   <property name="text">
+    <string>NETWORK ENGINEER </string>
+   </property>
+  </widget>
+  <zorder>widget_3</zorder>
+  <zorder>name_Label</zorder>
+  <zorder>name_Label2</zorder>
+  <zorder>image2_Label</zorder>
+  <zorder>image_Label</zorder>
+  <zorder>line</zorder>
+  <zorder>gizmo_Label</zorder>
+  <zorder>advance_Button</zorder>
+  <zorder>network_Button</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
