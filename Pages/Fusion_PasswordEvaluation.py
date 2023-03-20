@@ -19,6 +19,30 @@ class PasswordEvaluation(QDialog):
     symbol = False
     shift = False
     
+    
+    passwd_2021 = [
+        "password",
+        "123456",
+        "qwerty",
+        "123456789",
+        "admin",
+        "letmein",
+        "welcome",
+        "monkey",
+        "dragon",
+        "football",
+        "iloveyou",
+        "abc123",
+        "admin123",
+        "password123",
+        "1234567890",
+        "qwertyuiop",
+        "123123",
+        "superman",
+        "batman",
+        "trustno1"
+    ]
+    
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
         loadUi("./Files/Password_Evaluation.ui", self)
@@ -73,15 +97,19 @@ class PasswordEvaluation(QDialog):
         self.lower_check.setChecked(False)
         self.symbol_check.setChecked(False)
         
-    
+
+        # Find the password in the list of weak passwords
+        
+            
         if password == '':
             self.entropy_Label.setText('')
             self.warning_Start.setText('Start typing to see the entropy score')
             self.quality_Label.setText('')
         else:
-            self.warning_Start.setText('Not found in the list')
-            if len(password) >= 8:
-                self.warning_Start.setText('Found in the top 10 million passwords!')
+            if password in self.passwd_2021:
+                self.warning_Start.setText('Found in the top 10 million passwords! "2021" ')
+            else:
+                self.warning_Start.setText('Not found in the list')
         
         
         for char in password:
