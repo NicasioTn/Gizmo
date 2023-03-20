@@ -40,9 +40,18 @@ class PasswordEvaluation(QDialog):
         "123123",
         "superman",
         "batman",
-        "trustno1"
+        "trustno1",
+        "1234567",
+        "12345678",
+        "12345",
+        "111111",
+        "login",
+        "starwars",
+        "letmein"
+        "zaq1zaq1"
     ]
     
+
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
         loadUi("./Files/Password_Evaluation.ui", self)
