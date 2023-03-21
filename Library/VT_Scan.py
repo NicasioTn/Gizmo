@@ -46,28 +46,29 @@ import requests
 
 # print(response.json())
 
-''' URL Scan'''
-url = "https://fb.watch/jldEw0RWjs/"
-
-import requests
-
-url = 'https://www.virustotal.com/vtapi/v2/url/scan'
-
-params = {'apikey': api_key, 'url': url}
-
-response = requests.post(url, data=params)
-
-#print(response.json())
+''' URL Scan''' # ------------------------------------------------------------------------------------------------------------------------------
+# url = "https://fb.watch/jldEw0RWjs/"
 
 # import requests
 
-url = 'https://www.virustotal.com/vtapi/v2/url/report'
+# url = 'https://www.virustotal.com/vtapi/v2/url/scan'
 
-params = {'apikey': api_key, 'resource':'https://fb.watch/jldEw0RWjs/'}
+# params = {'apikey': api_key, 'url': url}
 
-response = requests.get(url, params=params)
+# response = requests.post(url, data=params)
 
-print(response.json())
+# #print(response.json())
+
+# # import requests
+
+# url = 'https://www.virustotal.com/vtapi/v2/url/report'
+
+# params = {'apikey': api_key, 'resource':'https://fb.watch/jldEw0RWjs/'}
+
+# response = requests.get(url, params=params)
+
+# print(response.json())
+# -----------------------------------------------------------------------------------------------------------------------------------------------
 
 # import requests
 
