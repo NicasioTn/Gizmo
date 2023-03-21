@@ -1,0 +1,41 @@
+Python-nmap เป็น Python module ที่ใช้สำหรับเชื่อมต่อกับ Nmap และใช้สำหรับสแกนเครือข่าย ซึ่งมี method หลายตัวที่ใช้งานได้ ดังนี้
+
+nmap.PortScanner(): สร้างตัวแปรสำหรับใช้งาน Nmap
+
+scan(hosts=None, arguments=None, sudo=False): สแกนเครือข่ายโดยระบุ hosts และ arguments ที่ต้องการ โดยสามารถใช้ sudo ได้เพื่อเข้าถึงพอร์ตที่ต้องการ
+
+all_hosts(): สร้าง output ของ hosts ทั้งหมดที่สแกนได้
+
+all_tcp(): สร้าง output ของพอร์ต TCP ทั้งหมดที่สแกนได้
+
+all_udp(): สร้าง output ของพอร์ต UDP ทั้งหมดที่สแกนได้
+
+all_ip() สร้าง output ของ IP address ทั้งหมดที่สแกนได้
+
+all_protocols(): สร้าง output ของ protocol ทั้งหมดที่สแกนได้
+
+has_host(host): ตรวจสอบว่ามี host นี้อยู่ใน output หรือไม่
+
+csv(): สร้าง output ในรูปแบบ CSV
+
+json(): สร้าง output ในรูปแบบ JSON
+
+xml(): สร้าง output ในรูปแบบ XML
+
+grep(pattern): ค้นหา pattern ใน output และสร้าง output ที่ตรงกับ pattern
+
+get_nmap_last_output(): สร้าง output ล่าสุดของ Nmap
+
+get_nmap_version(): สร้างเวอร์ชันของ Nmap
+
+get_nmap_release(): สร้าง release ของ Nmap
+
+get_nmap_subversion(): สร้าง subversion ของ Nmap
+
+get_nmap_environment(): สร้าง environment ของ Nmap
+
+get_nmap_arguments(): สร้าง arguments ของ Nmap
+
+get_nmap_path(): สร้าง path ของ Nmap
+
+get_nmap_last_output_as_xml(): สร้าง output ล่าสุดของ Nmap ในรูปแบบ XM

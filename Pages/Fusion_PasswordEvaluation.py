@@ -108,10 +108,7 @@ class PasswordEvaluation(QDialog):
         self.lower_check.setChecked(False)
         self.symbol_check.setChecked(False)
         
-
         # Find the password in the list of weak passwords
-        
-            
         if password == '':
             self.entropy_Label.setText('')
             self.warning_Start.setText('Start typing to see the entropy score')

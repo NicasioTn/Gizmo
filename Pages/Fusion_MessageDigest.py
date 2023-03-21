@@ -203,23 +203,12 @@ class MessageDigest(QDialog):
             if path.exists(): # check if file exists 
                 print("File exists")
             print(path) 
-            # set and show image from browse file
-            # imagePath = f"{path}"
-            # pixmap = QPixmap(imagePath)
-            # self.output_QR_Label.setPixmap(pixmap)
-            # self.resize(pixmap.width(), pixmap.height())
             
             self.state_browse_file = True # browsed file 
             if(self.state_browse_file == True):
                 #hashfile = self.hash_file(path, self.state)
                 self.setPath(path)
-            
-    def setPath(self, path):
-        self.path = path
-    
-    def getPath(self):
-        return self.path
-    
+                
     # Show Image Section ---------------------------------------------
     def ShowImage_QR(self):
         imagePath = "./SaveQR/MessageDigest-QRCode.png"
@@ -228,6 +217,14 @@ class MessageDigest(QDialog):
         pixmap = pixmap.scaledToHeight(200)
         self.output_QR_Label.setPixmap(pixmap)
         #self.resize(pixmap.width(), pixmap.height())
+            
+    def setPath(self, path):
+        self.path = path
+    
+    def getPath(self):
+        return self.path
+    
+    
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -111,3 +111,24 @@ import requests
 # response = requests.post(url, data=params)
 
 # print(response.json())
+
+#file scan-------------------------------------------------------------------------------------------------------------------------------------
+import requests
+
+# ใส่ API Key ที่ได้รับจาก VirusTotal
+api_key = 'e8cf03a48915da2f70adfb45ae906ce940e837c47ba572bb30a8f1b8573df8e8'
+
+# ส่งไฟล์เพื่อสแกนไวรัส
+url = 'https://www.virustotal.com/vtapi/v2/file/scan'
+params = {'apikey': api_key}
+files = {'file': ('myfile.exe', open('D:\Project\Project 1\Code\Library\TestNmapOutput.py', 'rb'))}
+response = requests.post(url, files=files, params=params)
+
+# รอรับผลการสแกนจาก VirusTotal
+resource = response.json()['resource']
+url = 'https://www.virustotal.com/vtapi/v2/file/report'
+params = {'apikey': api_key, 'resource': resource}
+response = requests.get(url, params=params)
+
+# แสดงผลลัพธ์การสแกน
+print(response.json())

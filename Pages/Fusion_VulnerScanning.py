@@ -95,19 +95,19 @@ class VulnerabilityScan(QDialog):
         self.vulner_Button.clicked.connect(self.vulner)
     
     def stealth(self):
-        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v")
+        self.options_LineEdit.setText("-sS -sF")
         self.setMode("Stealth")
     
     def aggressive(self):
-        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v -p-")
+        self.options_LineEdit.setText("-sS -sV -O ")
         self.setMode("Aggressive")
         
     def adaptive(self):
-        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v -p- --script vuln")
+        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v -p- ")
         self.setMode("Adaptive")
         
     def vulner(self):
-        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v -p- --script vuln --script-args vulscandb=scipvuldb.csv")
+        self.options_LineEdit.setText("--script vuln --script-args vulscandb=scipvuldb.csv")
         self.setMode("Vulner.NSE Script")
         
     def setMode(self, mode):
