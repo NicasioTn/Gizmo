@@ -229,6 +229,8 @@ if __name__ == "__main__":
     window = MessageDigest()
     window.setFixedHeight(700)
     window.setFixedWidth(1200)
+    window.setMinimumSize(1200, 700)
+    window.setMaximumSize(1200, 700)
     window.show()
     sys.exit(app.exec())     
     
