@@ -2,7 +2,7 @@ import os
 import sys
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QApplication, QDialog, QFileDialog, QMessageBox
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtGui import QPixmap, QIcon
 from pathlib import Path
 from PyQt6.QtGui import QIcon
 import hashlib
@@ -30,8 +30,10 @@ class MessageDigest(QDialog):
         loadUi("./Files/Message_Digest.ui", self)
         self.setWindowTitle("Message Digest")
         self.window_icon = QIcon("./Images/logo.png")
+        self.logo = QPixmap("./Images/logo.png")
         
         self.setWindowIcon(self.window_icon)
+        self.logo_Label.setPixmap(self.logo)
         
         # Event Clicked
         self.MD5_Button.clicked.connect(self.Md5)

@@ -472,7 +472,7 @@ border-color: rgb(255, 255, 255);
     <string>ENTER TEXT OR FILE </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="logo_Label">
    <property name="geometry">
     <rect>
      <x>40</x>
