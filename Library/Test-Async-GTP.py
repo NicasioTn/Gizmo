@@ -9,12 +9,12 @@ class IpLookupThread(QThread):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ip_address = '8.8.8.8'
-
-    async def lookup_ip(self):
+    
+    async def lookup_ip(self, file_side=130):
         # Simulate an asynchronous IP lookup
         for i in range(1, 11):
             await asyncio.sleep(1)
-            self.progress_updated.emit(i * 10)
+            self.progress_updated.emit(i * file_side // 10)
         self.progress_updated.emit(100)
 
     def run(self):
@@ -50,3 +50,5 @@ if __name__ == '__main__':
     window = MainWindow()
     window.show()
     app.exec()
+
+
