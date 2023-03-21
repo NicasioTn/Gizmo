@@ -7,7 +7,7 @@ from PyQt6.uic import loadUi
 from datetime import datetime
 from tabulate import tabulate
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QTableWidget, QTableWidgetItem,  QDialog, QFileDialog
-
+from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import QThread, pyqtSignal, QCoreApplication, Qt
 
 # Reference Tool path for Nmap
@@ -58,7 +58,9 @@ class VulnerabilityScan(QDialog):
         super(VulnerabilityScan, self).__init__()
         loadUi("./Files/Vulnerability_Scanning.ui", self)
         self.setWindowTitle("Vulnerability Scan")
+        self.window_icon = QIcon("./Images/logo.png")
         
+        self.setWindowIcon(self.window_icon)
         self.progressBar.setVisible(False)
         # Events Click
         self.scan_Button.clicked.connect(self.scan)

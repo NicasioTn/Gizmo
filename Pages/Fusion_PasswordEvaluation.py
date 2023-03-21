@@ -63,7 +63,9 @@ class PasswordEvaluation(QDialog):
         self.hide_icon = QIcon("./Images/hide.png")
         self.unhid_icon = QIcon("./Images/unhide.png")
         self.logo = QPixmap("./Images/logo.png")
+        self.window_icon = QIcon("./Images/logo.png")
         
+        self.setWindowIcon(self.window_icon)
         self.logo_Label.setPixmap(self.logo)
         # Hide Input
         self.show_Button.setIcon(self.hide_icon)
