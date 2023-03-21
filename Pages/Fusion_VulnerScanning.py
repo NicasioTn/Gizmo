@@ -40,10 +40,24 @@ class VulnerabilityScan(QDialog):
                 border: 1px solid #CCCCCC;   
             }
         """)
-
         self.clear_Button.clicked.connect(self.clear)
-        
-        
+        self.stealth_Button.clicked.connect(self.stealth)
+        self.aggressive_Button.clicked.connect(self.aggressive)
+        self.adaptive_Button.clicked.connect(self.adaptive)
+        self.vulner_Button.clicked.connect(self.vulner)
+    
+    def stealth(self):
+        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v")
+    
+    def aggressive(self):
+        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v -p-")
+    
+    def adaptive(self):
+        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v -p- --script vuln")
+    
+    def vulner(self):
+        self.options_LineEdit.setText("-sS -sV -O -T4 -A -v -p- --script vuln --script-args vulscandb=scipvuldb.csv")
+    
     def clear(self):
         self.result_tabWidget.clear()
         self.date_Label.clear()
