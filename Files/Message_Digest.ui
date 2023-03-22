@@ -286,6 +286,9 @@ border-bottom-right-radius : 20px;
    <property name="text">
     <string/>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="output_hash_Label">
    <property name="geometry">
@@ -296,18 +299,27 @@ border-bottom-right-radius : 20px;
      <height>91</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>17</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgba(27,79,96,70%);
-color: rgb(0, 0, 0);
 border-top-left-radius :20px;
 border-top-right-radius :20px; 
 border-bottom-left-radius : 20px; 
 border-bottom-right-radius : 20px;
-
-</string>
+color: white;</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="save_Button">

@@ -155,16 +155,12 @@ class PasswordEvaluation(QDialog):
             if length == 0:
                 self.quality_Label.setText('')
         else : 
-            if entropy < 35 :
-                self.quality_Label.setText('Not good enough')
-            elif entropy < 50 :
-                self.quality_Label.setText('You could do better')
-            elif entropy < 75:
-                self.quality_Label.setText('That\'ll do nicely!')
-            elif entropy < 100:
-                self.quality_Label.setText('You\'re a genius! ')
+            if entropy < 50 :
+                self.quality_Label.setText('Weak password')
+            elif entropy < 80 :
+                self.quality_Label.setText('Medium strength')
             else:
-                self.quality_Label.setText('Good luck cracking that, H4x0r')
+                self.quality_Label.setText('Good password')
         
         # Update the input length label
         self.charLength8_Label.setText(f'{length} Chars')

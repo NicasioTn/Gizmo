@@ -121,7 +121,7 @@ class MessageDigest(QDialog):
             else:
                 sha1 = Hashing.sha1(self, self.input.text())
                 print(f"SHA1: {sha1}")
-                self.output_hash_Label.setText(f'Result: {sha1}')
+                self.output_hash_Label.setText(f'{sha1}')
                 self.qrCodeGenerator(sha1)
             
         
