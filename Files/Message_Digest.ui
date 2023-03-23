@@ -43,9 +43,9 @@
   <widget class="QLineEdit" name="input">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>40</x>
      <y>210</y>
-     <width>501</width>
+     <width>541</width>
      <height>51</height>
     </rect>
    </property>
@@ -76,9 +76,9 @@ border-bottom-right-radius : 20px;
   <widget class="QPushButton" name="browse_Button">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>40</x>
      <y>320</y>
-     <width>231</width>
+     <width>261</width>
      <height>51</height>
     </rect>
    </property>
@@ -108,9 +108,9 @@ border-bottom-right-radius : 20px;
   <widget class="QPushButton" name="clear_Button">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>320</x>
      <y>320</y>
-     <width>231</width>
+     <width>261</width>
      <height>51</height>
     </rect>
    </property>
@@ -139,7 +139,7 @@ border-color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="MD5_Button">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>40</x>
      <y>440</y>
      <width>101</width>
      <height>51</height>
@@ -171,8 +171,8 @@ border-bottom-right-radius : 20px;
   <widget class="QPushButton" name="SHA1_Button">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>440</y>
+     <x>40</x>
+     <y>520</y>
      <width>101</width>
      <height>51</height>
     </rect>
@@ -200,10 +200,10 @@ border-bottom-right-radius : 20px;
     <string>SHA-1</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="SHA2_Button">
+  <widget class="QPushButton" name="SHA2_224_Button">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>150</x>
      <y>440</y>
      <width>101</width>
      <height>51</height>
@@ -229,13 +229,14 @@ border-bottom-right-radius : 20px;
 </string>
    </property>
    <property name="text">
-    <string>SHA-2</string>
+    <string>SHA-2
+224 bit</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="SHA3_Button">
+  <widget class="QPushButton" name="SHA3_224_Button">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>370</x>
      <y>440</y>
      <width>101</width>
      <height>51</height>
@@ -261,15 +262,16 @@ border-bottom-right-radius : 20px;
 </string>
    </property>
    <property name="text">
-    <string>SHA-3</string>
+    <string>SHA-3
+224 bit</string>
    </property>
   </widget>
   <widget class="QLabel" name="output_QR_Label">
    <property name="geometry">
     <rect>
-     <x>670</x>
+     <x>620</x>
      <y>190</y>
-     <width>501</width>
+     <width>551</width>
      <height>231</height>
     </rect>
    </property>
@@ -293,9 +295,9 @@ border-bottom-right-radius : 20px;
   <widget class="QLabel" name="output_hash_Label">
    <property name="geometry">
     <rect>
-     <x>670</x>
+     <x>620</x>
      <y>490</y>
-     <width>501</width>
+     <width>551</width>
      <height>91</height>
     </rect>
    </property>
@@ -325,7 +327,7 @@ color: white;</string>
   <widget class="QPushButton" name="save_Button">
    <property name="geometry">
     <rect>
-     <x>890</x>
+     <x>850</x>
      <y>610</y>
      <width>111</width>
      <height>51</height>
@@ -358,7 +360,7 @@ border-bottom-right-radius : 20px;
   <widget class="QLabel" name="QR_Label">
    <property name="geometry">
     <rect>
-     <x>680</x>
+     <x>620</x>
      <y>130</y>
      <width>101</width>
      <height>51</height>
@@ -406,7 +408,7 @@ border-bottom-right-radius : 20px;
   <widget class="QLabel" name="result_Label">
    <property name="geometry">
     <rect>
-     <x>680</x>
+     <x>630</x>
      <y>430</y>
      <width>91</width>
      <height>51</height>
@@ -463,7 +465,7 @@ border-color: rgb(255, 255, 255);
   <widget class="QLabel" name="enter_text_Label">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>200</x>
      <y>150</y>
      <width>201</width>
      <height>51</height>
@@ -501,6 +503,204 @@ border-color: rgb(255, 255, 255);
    </property>
    <property name="scaledContents">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA2_256_Button">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-2
+256 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA2_384_Button">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>440</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-2
+384 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA2_512_Button">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-2
+512 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA3_256_Button">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-3
+256 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA3_384_Button">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>440</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-3
+384 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA3_512_Button">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-3
+512 bit</string>
    </property>
   </widget>
  </widget>

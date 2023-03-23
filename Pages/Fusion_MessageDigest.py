@@ -9,17 +9,36 @@ import hashlib
 import qrcode
 
 class Hashing:
+    
     def md5(self, data):
         return hashlib.md5(data.encode('utf-8')).hexdigest()
 
     def sha1(self, data):
         return hashlib.sha1(data.encode('utf-8')).hexdigest()
 
+    def sha224(self, data):
+        return hashlib.sha224(data.encode('utf-8')).hexdigest()
+
     def sha256(self, data):
         return hashlib.sha256(data.encode('utf-8')).hexdigest()
 
+    def sha384(self, data):
+        return hashlib.sha384(data.encode('utf-8')).hexdigest()
+
+    def sha512(self, data):
+        return hashlib.sha512(data.encode('utf-8')).hexdigest()
+
+    def sha3_224(self, data):
+        return hashlib.sha3_224(data.encode('utf-8')).hexdigest()
+
     def sha3_256(self, data):
         return hashlib.sha3_256(data.encode('utf-8')).hexdigest()
+
+    def sha3_384(self, data):
+        return hashlib.sha3_384(data.encode('utf-8')).hexdigest()
+
+    def sha3_512(self, data):
+        return hashlib.sha3_512(data.encode('utf-8')).hexdigest()
 
 class MessageDigest(QDialog):
     # properties
@@ -38,8 +57,14 @@ class MessageDigest(QDialog):
         # Event Clicked
         self.MD5_Button.clicked.connect(self.Md5)
         self.SHA1_Button.clicked.connect(self.Sha1)
-        self.SHA2_Button.clicked.connect(self.Sha2)
-        self.SHA3_Button.clicked.connect(self.Sha3) 
+        self.SHA2_224_Button.clicked.connect(self.Sha2_224)
+        self.SHA2_256_Button.clicked.connect(self.Sha2_256)
+        self.SHA2_384_Button.clicked.connect(self.Sha2_384)
+        self.SHA2_512_Button.clicked.connect(self.Sha2_512)
+        self.SHA3_224_Button.clicked.connect(self.Sha3_224) 
+        self.SHA3_256_Button.clicked.connect(self.Sha3_256)
+        self.SHA3_384_Button.clicked.connect(self.Sha3_384)
+        self.SHA3_512_Button.clicked.connect(self.Sha3_512)
         self.clear_Button.clicked.connect(self.input.clear)
         self.clear_Button.clicked.connect(self.clearResult)
         self.save_Button.clicked.connect(self.saveQR)
@@ -125,7 +150,31 @@ class MessageDigest(QDialog):
                 self.qrCodeGenerator(sha1)
             
         
-    def Sha2(self):
+    def Sha2_224(self):
+        if os.path.isfile(self.input.text()):
+            init_hash = hashlib.sha224()
+            path_direct = self.getPath()
+            file = path_direct 
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash SHA2_224: {file_hashed}") 
+            self.output_hash_Label.setText(f'{file_hashed}')
+            self.qrCodeGenerator(file_hashed)
+        else:
+            if(self.input.text() == ''):
+                print("Error: Text is Empty")
+            else:
+                sha2 = Hashing.sha256(self, self.input.text())
+                print(f'SHA2_224: {sha2}')
+                self.output_hash_Label.setText(f'{sha2}')
+                self.qrCodeGenerator(sha2)
+                
+    def Sha2_256(self):
         if os.path.isfile(self.input.text()):
             init_hash = hashlib.sha256()
             path_direct = self.getPath()
@@ -137,7 +186,7 @@ class MessageDigest(QDialog):
                     init_hash.update(fb) 
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
-            print (f"This is file hash SHA2: {file_hashed}") 
+            print (f"This is file hash SHA2_256: {file_hashed}") 
             self.output_hash_Label.setText(f'{file_hashed}')
             self.qrCodeGenerator(file_hashed)
         else:
@@ -145,12 +194,82 @@ class MessageDigest(QDialog):
                 print("Error: Text is Empty")
             else:
                 sha2 = Hashing.sha256(self, self.input.text())
-                print(f'SHA2: {sha2}')
+                print(f'SHA2_256: {sha2}')
                 self.output_hash_Label.setText(f'{sha2}')
                 self.qrCodeGenerator(sha2)
-            
+    def Sha2_384(self):
+        if os.path.isfile(self.input.text()):
+            init_hash = hashlib.sha384()
+            path_direct = self.getPath()
+            file = path_direct 
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash SHA2_384: {file_hashed}") 
+            self.output_hash_Label.setText(f'{file_hashed}')
+            self.qrCodeGenerator(file_hashed)
+        else:
+            if(self.input.text() == ''):
+                print("Error: Text is Empty")
+            else:
+                sha2 = Hashing.sha384(self, self.input.text())
+                print(f'SHA2_384: {sha2}')
+                self.output_hash_Label.setText(f'{sha2}')
+                self.qrCodeGenerator(sha2)
+                
+    def Sha2_512(self):
+        if os.path.isfile(self.input.text()):
+            init_hash = hashlib.sha512()
+            path_direct = self.getPath()
+            file = path_direct 
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash SHA2_512: {file_hashed}") 
+            self.output_hash_Label.setText(f'{file_hashed}')
+            self.qrCodeGenerator(file_hashed)
+        else:
+            if(self.input.text() == ''):
+                print("Error: Text is Empty")
+            else:
+                sha2 = Hashing.sha512(self, self.input.text())
+                print(f'SHA2_512: {sha2}')
+                self.output_hash_Label.setText(f'{sha2}')
+                self.qrCodeGenerator(sha2)
+                
+    def Sha3_224(self):
+        if os.path.isfile(self.input.text()):
+            init_hash = hashlib.sha3_224()
+            path_direct = self.getPath()
+            file = path_direct 
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash SHA3_224: {file_hashed}") 
+            self.output_hash_Label.setText(f'{file_hashed}')
+            self.qrCodeGenerator(file_hashed)
+        else:
+            if(self.input.text() == ''):
+                print("Error: Text is Empty")
+            else:
+                sha3 = Hashing.sha3_256(self, self.input.text())
+                print(f'SHA3_224: {sha3}')
+                self.output_hash_Label.setText(f'{sha3}')
+                self.qrCodeGenerator(sha3)
     
-    def Sha3(self):
+    def Sha3_256(self):
         if os.path.isfile(self.input.text()):
             init_hash = hashlib.sha3_256()
             path_direct = self.getPath()
@@ -162,7 +281,7 @@ class MessageDigest(QDialog):
                     init_hash.update(fb) 
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
-            print (f"This is file hash SHA3: {file_hashed}") 
+            print (f"This is file hash SHA3_256: {file_hashed}") 
             self.output_hash_Label.setText(f'{file_hashed}')
             self.qrCodeGenerator(file_hashed)
         else:
@@ -170,11 +289,58 @@ class MessageDigest(QDialog):
                 print("Error: Text is Empty")
             else:
                 sha3 = Hashing.sha3_256(self, self.input.text())
-                print(f'SHA3: {sha3}')
+                print(f'SHA3_256: {sha3}')
                 self.output_hash_Label.setText(f'{sha3}')
                 self.qrCodeGenerator(sha3)
             
-    
+    def Sha3_384(self):
+        if os.path.isfile(self.input.text()):
+            init_hash = hashlib.sha3_384()
+            path_direct = self.getPath()
+            file = path_direct 
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash SHA3_384: {file_hashed}") 
+            self.output_hash_Label.setText(f'{file_hashed}')
+            self.qrCodeGenerator(file_hashed)
+        else:
+            if(self.input.text() == ''):
+                print("Error: Text is Empty")
+            else:
+                sha3 = Hashing.sha3_384(self, self.input.text())
+                print(f'SHA3_512: {sha3}')
+                self.output_hash_Label.setText(f'{sha3}')
+                self.qrCodeGenerator(sha3)
+                
+    def Sha3_512(self):
+        if os.path.isfile(self.input.text()):
+            init_hash = hashlib.sha3_512()
+            path_direct = self.getPath()
+            file = path_direct 
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash SHA3_512: {file_hashed}") 
+            self.output_hash_Label.setText(f'{file_hashed}')
+            self.qrCodeGenerator(file_hashed)
+        else:
+            if(self.input.text() == ''):
+                print("Error: Text is Empty")
+            else:
+                sha3 = Hashing.sha3_512(self, self.input.text())
+                print(f'SHA3_512: {sha3}')
+                self.output_hash_Label.setText(f'{sha3}')
+                self.qrCodeGenerator(sha3)
+                
     # QR-Code Section ---------------------------------------------
     def qrCodeGenerator(self, hash):
         qr = qrcode.QRCode(
