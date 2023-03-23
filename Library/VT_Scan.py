@@ -113,22 +113,42 @@ import requests
 # print(response.json())
 
 #file scan-------------------------------------------------------------------------------------------------------------------------------------
+# import requests
+
+# # ใส่ API Key ที่ได้รับจาก VirusTotal
+# api_key = 'e8cf03a48915da2f70adfb45ae906ce940e837c47ba572bb30a8f1b8573df8e8'
+
+# # ส่งไฟล์เพื่อสแกนไวรัส
+# url = 'https://www.virustotal.com/vtapi/v2/file/scan'
+# params = {'apikey': api_key}
+# files = {'file': ('myfile.exe', open('D:\Project\Project 1\Code\Library\TestNmapOutput.py', 'rb'))}
+# response = requests.post(url, files=files, params=params)
+
+# # รอรับผลการสแกนจาก VirusTotal
+# resource = response.json()['resource']
+# url = 'https://www.virustotal.com/vtapi/v2/file/report'
+# params = {'apikey': api_key, 'resource': resource}
+# response = requests.get(url, params=params)
+
+# # แสดงผลลัพธ์การสแกน
+# print(response.json())
 import requests
 
-# ใส่ API Key ที่ได้รับจาก VirusTotal
-api_key = 'e8cf03a48915da2f70adfb45ae906ce940e837c47ba572bb30a8f1b8573df8e8'
+# Call the /file/scan/upload_url endpoint to get the URL to which we can upload a file for scanning
+url = 'https://www.virustotal.com/api/v2/file/scan/upload_url'
+headers = {'x-apikey': 'e8cf03a48915da2f70adfb45ae906ce940e837c47ba572bb30a8f1b8573df8e8'}
 
-# ส่งไฟล์เพื่อสแกนไวรัส
-url = 'https://www.virustotal.com/vtapi/v2/file/scan'
-params = {'apikey': api_key}
-files = {'file': ('myfile.exe', open('D:\Project\Project 1\Code\Library\TestNmapOutput.py', 'rb'))}
-response = requests.post(url, files=files, params=params)
+response = requests.get(url, headers=headers)
+if response.status_code == 200:
+    json_response = response.json()
+    upload_url = json_response['data']['upload_url']
+    print(f"The upload URL is: {upload_url}")
+    # Upload a file for scanning using the upload URL
+    file_to_scan = "D:/Project/Project 1/Code/Library/WiFiPassword.py"
+    files = {'file': (file_to_scan, open(file_to_scan, 'rb'))}
+    response = requests.post(upload_url, files=files)
+    print(response.text)
 
-# รอรับผลการสแกนจาก VirusTotal
-resource = response.json()['resource']
-url = 'https://www.virustotal.com/vtapi/v2/file/report'
-params = {'apikey': api_key, 'resource': resource}
-response = requests.get(url, params=params)
+else:
+    print(f"Error: {response.status_code} - {response.text}")
 
-# แสดงผลลัพธ์การสแกน
-print(response.json())
