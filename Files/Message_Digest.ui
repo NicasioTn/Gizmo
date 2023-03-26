@@ -465,9 +465,9 @@ border-color: rgb(255, 255, 255);
   <widget class="QLabel" name="enter_text_Label">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>230</x>
      <y>150</y>
-     <width>201</width>
+     <width>161</width>
      <height>51</height>
     </rect>
    </property>
