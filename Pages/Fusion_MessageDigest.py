@@ -358,10 +358,14 @@ class MessageDigest(QDialog):
     # Browse File Section ---------------------------------------------
     def open_file_dialog(self):
         filename, ok = QFileDialog.getOpenFileName(
+            # self,
+            # "Select a File", 
+            # "D:\\icons\\avatar\\", 
+            # "Images (*.png *.jpg)"
             self,
             "Select a File", 
             "D:\\icons\\avatar\\", 
-            "Images (*.png *.jpg)"
+            "Text Files (*.txt);;All Files (*)"
         )
         if filename:
             path = Path(filename)
