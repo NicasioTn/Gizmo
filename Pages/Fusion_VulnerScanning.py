@@ -28,6 +28,7 @@ class NmapScanThread(QThread):
         self.finished_signal.emit(True)
         
         result = []
+        
         for host in nm.all_hosts():
             for proto in nm[host].all_protocols():
                 lport = nm[host][proto].keys()
@@ -37,7 +38,22 @@ class NmapScanThread(QThread):
                     version = nm[host][proto][port]['version']
                     cve = nm[host][proto][port]['cpe']
                     result.append([port, state, service, version, cve])
-        
+                    
+        print(result)
+        for host in nm.all_hosts():
+            print('----------------------------------------------------')
+            print('Host : %s (%s)' % (host, nm[host].hostname()))
+            print('State : %s' % nm[host].state())
+            for proto in nm[host].all_protocols():
+                print('----------')
+                print('Protocol : %s' % proto)
+                
+                listport = nm[host][proto].keys()
+                listport.sort()
+                for port in list:
+                    print ('port : %s\tstate : %s' % (port, nm[host][proto][port]['state']))
+                    
+            
         table = tabulate(result, headers=["Port", "State", "Service", "Version", "CVE"])
         self.result = (table, result)
 
