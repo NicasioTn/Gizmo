@@ -37,5 +37,5 @@ ref: https://pypi.org/project/python-nmap/
 
 ## HTTPS Testing Tools
 ```
-pip install
+pip install hstspreload
 ```
