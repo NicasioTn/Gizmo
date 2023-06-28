@@ -2,11 +2,11 @@
 
 
 ## Table of Contents  
-[Description](#description)  
-[How to Install and Run the Project](#howtoInstallandRuntheProject)
-[How to Use the Project](#howtoUsetheProject)
-[Credits](#credits)
-[License](#license)
+[Description](#description)<br>
+[How to Install and Run the Project](#howtoInstallandRuntheProject)<br>
+[How to Use the Project](#howtoUsetheProject)<br>
+[Credits](#credits)<br>
+[License](#license)<br>
 ...snip...    
 <a name="description"/>
 <a name="howtoInstallandRuntheProject"/>
