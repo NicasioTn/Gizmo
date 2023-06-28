@@ -51,6 +51,40 @@ class PasswordEvaluation(QDialog):
         "zaq1zaq1"
     ]
     
+    def time_to_Crack(self):
+        
+        # Get the current password from the password edit widget
+        password = self.input_Text.text()
+
+        # check if password is empty
+        if password == '':
+            self.length8_check.setIcon(self.warning_icon)
+            self.number_check.setIcon(self.warning_icon)
+            self.upper_check.setIcon(self.warning_icon)
+            self.lower_check.setIcon(self.warning_icon)
+            self.symbol_check.setIcon(self.warning_icon)
+            return 0
+        # Get the number of possible characters in the password
+        possible_characters = 0
+        if self.number_check.isChecked(): # 0-9
+            possible_characters += 10
+        if self.upper_check.isChecked(): # A-Z
+            possible_characters += 26
+        if self.lower_check.isChecked(): # a-z
+            possible_characters += 26
+        if self.symbol_check.isChecked(): # !@#$%^&*()_+-=
+            possible_characters += 32
+
+        passwordType = possible_characters
+        combinations = passwordType ** len(password)
+        seconds = combinations / 2,000,000,000
+
+        #keyPerSecond = GFlops/
+        # Time in seconds
+        #seconds = combinations / keyPerSecond
+
+        
+        return seconds
 
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
