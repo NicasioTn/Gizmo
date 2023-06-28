@@ -1,6 +1,6 @@
-# Gizmo
-## installations
-# Main Setup
+# Gizmo installations
+
+## Main Setup
 Qt Designer
 PyQt6 for developments
 ```
