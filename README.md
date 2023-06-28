@@ -1,4 +1,4 @@
-# ISAN Security Gizmo Box <img src="https://user-images.githubusercontent.com/55986701/249410092-db9276da-6a8d-4a29-ab05-fc24e58b9941.gif" width="35"/>
+# ISAN Security Gizmo Box <img src="https://user-images.githubusercontent.com/55986701/249410092-db9276da-6a8d-4a29-ab05-fc24e58b9941.gif" width="40"/>
 <br>
 Description
 
