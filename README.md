@@ -5,7 +5,12 @@ This is an important component of your project that many new developers often ov
 [ ] Why you used the technologies you used ?
 [ ] Some of the challenges you faced and features you hope to implement in the future.
 
-# Table of Contents
+##### Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+## Headers
 
 # How to Install and Run the Project
 Python Install
