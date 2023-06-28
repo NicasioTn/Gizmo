@@ -1,6 +1,8 @@
 # Gizmo installations
 
 ## Main Setup
+Python Install
+link Download for windows: https://www.python.org/downloads/release/python-31010/
 Qt Designer
 PyQt6 for developments
 ```
