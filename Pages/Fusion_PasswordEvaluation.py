@@ -77,14 +77,23 @@ class PasswordEvaluation(QDialog):
 
         passwordType = possible_characters
         combinations = passwordType ** len(password)
-        seconds = combinations / 2,000,000,000
+        seconds = combinations / 2_000_000_000
+    
 
         #keyPerSecond = GFlops/
         # Time in seconds
         #seconds = combinations / keyPerSecond
 
-        
-        return seconds
+        if seconds > 31536000:
+            return f'{seconds / 31536000:.2f} Years'
+        elif seconds > 86400:
+            return f'{seconds / 86400:.2f} Days'
+        elif seconds > 3600:
+            return f'{seconds / 3600:.2f} Hours'
+        elif seconds > 60:
+            return f'{seconds / 60:.2f} Minutes'
+        else:
+            return f'{seconds.__round__(2)} Seconds' 
 
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
@@ -119,7 +128,7 @@ class PasswordEvaluation(QDialog):
         self.upper_check.setIcon(self.warning_icon)
         self.lower_check.setIcon(self.warning_icon)
         self.symbol_check.setIcon(self.warning_icon)
-       
+        
         
     def showPasswd(self):
         if self.hide:
@@ -198,7 +207,9 @@ class PasswordEvaluation(QDialog):
         
         # Update the input length label
         self.charLength8_Label.setText(f'{length} Chars')
-        
+
+        # Update the time to crack label
+        self.time_to_crack_Label.setText(f'Time To Crack: {self.time_to_Crack()}')
         
     def calculate_entropy(self, password):
         # Get the number of possible characters in the password
