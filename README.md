@@ -5,14 +5,13 @@ This is an important component of your project that many new developers often ov
 [ ] Why you used the technologies you used ?
 [ ] Some of the challenges you faced and features you hope to implement in the future.
 
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
+## Table of Contents  
+[Description](#description)  
 ...snip...    
-<a name="headers"/>
-## Headers
+<a name="description"/>
+## Description
 
-# How to Install and Run the Project
+## How to Install and Run the Project
 Python Install
 link Download for windows: https://www.python.org/downloads/release/python-31010/ 
 <br>
@@ -24,17 +23,17 @@ pip install PyQt6
 install Qt Designer GUI for Make GUI .ui
 Link: https://build-system.fman.io/qt-designer-download
 
-## Password Evaluations Tools
+### Password Evaluations Tools
 ```
 pip install 
 ```
-##  Message Digest Tools
+###  Message Digest Tools
 recheck by : https://emn178.github.io/online-tools/md5_checksum.html
 ```
 pip install qrcode
 ```
 
-##  Malware Scanner Tools
+###  Malware Scanner Tools
 ```
 pip install requests
 ```
@@ -42,7 +41,7 @@ pip install requests
 pip install fpdf
 ```
 
-## Vulnerabilities Scanner Tools
+### Vulnerabilities Scanner Tools
 Nmap functions
 ```
 pip install python-nmap
@@ -50,11 +49,11 @@ pip install python-nmap
 credit: Alexandre Norman
 ref: https://pypi.org/project/python-nmap/
 
-## HTTPS Testing Tools
+### HTTPS Testing Tools
 ```
 pip install hstspreload
 ```
 
-# How to Use the Project
-# Include Credits
-# Add a License
+## How to Use the Project
+## Include Credits
+## Add a License
