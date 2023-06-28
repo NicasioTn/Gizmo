@@ -61,6 +61,6 @@ ref: https://pypi.org/project/python-nmap/
 pip install hstspreload
 ```
 
-## How to Use the Project
+## How to Use the Project🔌🤏🏼
 ## Credits
-## License
+## License 📝🧑‍⚖️
