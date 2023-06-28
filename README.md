@@ -1,5 +1,8 @@
 # Gizmo
-installations
+## installations
+Nmap functions
 ```
-pip install nmap
+pip install python-nmap
 ```
+credit: Alexandre Norman
+ref: https://pypi.org/project/python-nmap/
