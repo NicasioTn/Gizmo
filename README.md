@@ -1,11 +1,11 @@
 # ISAN Security Gizmo Box <img src="https://user-images.githubusercontent.com/55986701/249410092-db9276da-6a8d-4a29-ab05-fc24e58b9941.gif" width="40"/>
-## Description
+## Description 👀📋
 This is an important component of your project that many new developers often overlook. <br>
 - [ ] What your application does ? <br>
 - [ ] Why you used the technologies you used ? <br>
 - [ ] Some of the challenges you faced and features you hope to implement in the future. <br>
 
-## Table of Contents  
+## Table of Contents 📃🔗
 * [Description](#description)<br>
 * [How to Install and Run the Project](#howtoInstallandRuntheProject)<br>
 * [How to Use the Project](#howtoUsetheProject)<br>
@@ -18,7 +18,7 @@ This is an important component of your project that many new developers often ov
 <a name="credits"/>
 <a name="license"/>
 
-## How to Install and Run the Project
+## How to Install and Run the Project 📁🗂️
 Python Install
 link Download for windows: https://www.python.org/downloads/release/python-31010/ 
 <br>
