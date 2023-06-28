@@ -6,7 +6,7 @@ This is an important component of your project that many new developers often ov
 - [ ] Some of the challenges you faced and features you hope to implement in the future. <br>
 
 ## Table of Contents  
-[Description](#description)<br>
+* [Description](#description)<br>
 [How to Install and Run the Project](#howtoInstallandRuntheProject)<br>
 [How to Use the Project](#howtoUsetheProject)<br>
 [Credits](#credits)<br>
