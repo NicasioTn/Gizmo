@@ -7,10 +7,10 @@ This is an important component of your project that many new developers often ov
 
 ## Table of Contents  
 * [Description](#description)<br>
-[How to Install and Run the Project](#howtoInstallandRuntheProject)<br>
-[How to Use the Project](#howtoUsetheProject)<br>
-[Credits](#credits)<br>
-[License](#license)<br>
+* [How to Install and Run the Project](#howtoInstallandRuntheProject)<br>
+* [How to Use the Project](#howtoUsetheProject)<br>
+* [Credits](#credits)<br>
+* [License](#license)<br>
 <!-- ...snip... -->    
 <a name="description"/>
 <a name="howtoInstallandRuntheProject"/>
