@@ -3,10 +3,16 @@
 
 ## Table of Contents  
 [Description](#description)  
-[How to Install and Run the Project](#HowtoInstallandRuntheProject)  
+[How to Install and Run the Project](#howtoInstallandRuntheProject)
+[How to Use the Project](#howtoUsetheProject)
+[Credits](#credits)
+[License](#license)
 ...snip...    
 <a name="description"/>
-<a name="HowtoInstallandRuntheProject"/>
+<a name="howtoInstallandRuntheProject"/>
+<a name="howtoUsetheProject"/>
+<a name="credits"/>
+<a name="license"/>
 
 ## Description
 This is an important component of your project that many new developers often overlook.
@@ -58,5 +64,5 @@ pip install hstspreload
 ```
 
 ## How to Use the Project
-## Include Credits
-## Add a License
+## Credits
+## License
