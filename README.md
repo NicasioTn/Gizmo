@@ -7,7 +7,7 @@
 [How to Use the Project](#howtoUsetheProject)<br>
 [Credits](#credits)<br>
 [License](#license)<br>
-...snip...    
+<!-- ...snip... -->    
 <a name="description"/>
 <a name="howtoInstallandRuntheProject"/>
 <a name="howtoUsetheProject"/>
