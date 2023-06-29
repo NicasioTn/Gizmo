@@ -83,13 +83,40 @@ class PasswordEvaluation(QDialog):
         seconds = f'{seconds:.0f}'
         seconds = int(seconds)
 
-        hours = seconds // 3600  # Number of whole hours
-        minutes = (seconds % 3600) // 60  # Number of whole minutes remaining
-        seconds = seconds % 60  # Number of seconds remaining
+        # hours = seconds // 3600  # Number of whole hours
+        # minutes = (seconds % 3600) // 60  # Number of whole minutes remaining
+        # seconds = seconds % 60  # Number of seconds remaining
 
-        return f'{hours} Hours, {minutes} Minutes, {seconds} Seconds' #f'{hours}:{minutes}:{seconds}'
+        # return f'{hours} Hours, {minutes} Minutes, {seconds} Seconds' #f'{hours}:{minutes}:{seconds}'
 
+        minutes, seconds = divmod(seconds, 60)
+        hours, minutes = divmod(minutes, 60)
+        days, hours = divmod(hours, 24)
+        weeks, days = divmod(days, 7)
+        months, weeks = divmod(weeks, 4)
+        years, months = divmod(months, 12)
+
+        if years > 10:
+            return "Please sleep wait for your next life."
     
+        time_parts = []
+        if years > 0:
+            time_parts.append(f"{years} year{'s' if years != 1 else ''}")
+        if months > 0:
+            time_parts.append(f"{months} month{'s' if months != 1 else ''}")
+        if weeks > 0:
+            time_parts.append(f"{weeks} week{'s' if weeks != 1 else ''}")
+        if days > 0:
+            time_parts.append(f"{days} day{'s' if days != 1 else ''}")
+        if hours > 0:
+            time_parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
+        if minutes > 0:
+            time_parts.append(f"{minutes} minute{'s' if minutes != 1 else ''}")
+        if seconds > 0:
+            time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
+
+        return ", ".join(time_parts)
+
 
 
     def __init__(self):
