@@ -75,25 +75,22 @@ class PasswordEvaluation(QDialog):
         if self.symbol_check.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
 
-        passwordType = possible_characters
+        passwordType = possible_characters        
         combinations = passwordType ** len(password)
-        seconds = combinations / 2_000_000_000
+        
+        KPS_2020 = 17042497.3 # 17 Million
+        seconds = combinations / KPS_2020
+        seconds = f'{seconds:.0f}'
+        seconds = int(seconds)
+
+        hours = seconds // 3600  # Number of whole hours
+        minutes = (seconds % 3600) // 60  # Number of whole minutes remaining
+        seconds = seconds % 60  # Number of seconds remaining
+
+        return f'{hours} Hours, {minutes} Minutes, {seconds} Seconds' #f'{hours}:{minutes}:{seconds}'
+
     
 
-        #keyPerSecond = GFlops/
-        # Time in seconds
-        #seconds = combinations / keyPerSecond
-
-        if seconds > 31536000:
-            return f'{seconds / 31536000:.2f} Years'
-        elif seconds > 86400:
-            return f'{seconds / 86400:.2f} Days'
-        elif seconds > 3600:
-            return f'{seconds / 3600:.2f} Hours'
-        elif seconds > 60:
-            return f'{seconds / 60:.2f} Minutes'
-        else:
-            return f'{seconds.__round__(2)} Seconds' 
 
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
