@@ -33,7 +33,7 @@ class PasswordEvaluation(QDialog):
             json_object = json.load(openfile)
         
         for item in json_object:
-            self.nordpass_common_passwords.append(item['Password']) # Add the password to the list of weak passwords
+            self.nordpass_common_passwords.append(str(item['Password'])) # Add the password to the list of weak passwords
 
 
         # Icons Init

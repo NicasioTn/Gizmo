@@ -13,8 +13,9 @@ response = requests.get('https://nordpass.com/json-data/top-worst-passwords/find
 
 print(response.text)
 
-
+# Convert the response to a JSON object
 json_object = json.dumps(response.json())
 
+# Write the JSON object to a file
 with open("nordpass_wordlist.json", "w") as outfile:
     outfile.write(json_object)
