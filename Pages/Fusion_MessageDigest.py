@@ -148,11 +148,10 @@ class MessageDigest(QDialog):
                 print(f"SHA1: {sha1}")
                 self.output_hash_Label.setText(f'{sha1}')
                 self.qrCodeGenerator(sha1)
-            
-        
+               
     def Sha2_224(self):
         if os.path.isfile(self.input.text()):
-            init_hash = hashlib.sha224()
+            init_hash = hashlib.sha224() 
             path_direct = self.getPath()
             file = path_direct 
             BLOCK_SIZE = 65536 

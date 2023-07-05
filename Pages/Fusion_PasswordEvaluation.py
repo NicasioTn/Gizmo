@@ -8,6 +8,8 @@ from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtGui import QPixmap
 
+import json
+
 class PasswordEvaluation(QDialog):
     
     # Initialize the properties of the class
@@ -19,44 +21,21 @@ class PasswordEvaluation(QDialog):
     symbol = False
     shift = False
     
-    
-    passwd_2021 = [
-        "password",
-        "123456",
-        "qwerty",
-        "123456789",
-        "admin",
-        "letmein",
-        "welcome",
-        "monkey",
-        "dragon",
-        "football",
-        "iloveyou",
-        "abc123",
-        "admin123",
-        "password123",
-        "1234567890",
-        "qwertyuiop",
-        "123123",
-        "superman",
-        "batman",
-        "trustno1",
-        "1234567",
-        "12345678",
-        "12345",
-        "111111",
-        "login",
-        "starwars",
-        "letmein"
-        "zaq1zaq1"
-    ]
-    
+    nordpass_common_passwords = []
 
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
         loadUi("./Files/Password_Evaluation.ui", self)
         self.setWindowTitle("Password Evaluation")
+
+        # Load the list of weak passwords
+        with open('nordpass_wordlist.json', 'r') as openfile:
+            json_object = json.load(openfile)
         
+        for item in json_object:
+            self.nordpass_common_passwords.append(item['Password']) # Add the password to the list of weak passwords
+
+
         # Icons Init
         self.warning_icon = QIcon("./Images/warning.png")
         self.check_icon = QIcon("./Images/Checked.png")
@@ -114,8 +93,9 @@ class PasswordEvaluation(QDialog):
             self.warning_Start.setText('Start typing to see the entropy score')
             self.quality_Label.setText('')
         else:
-            if password in self.passwd_2021:
-                self.warning_Start.setText('Found in the top 10 million passwords! "2021" ')
+            if password in self.nordpass_common_passwords:
+                print(self.nordpass_common_passwords.index(password))
+                self.warning_Start.setText('Found in the top 200 most common passwords by NordPass')
             else:
                 self.warning_Start.setText('Not found in the list')
         
